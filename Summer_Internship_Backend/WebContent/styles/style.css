@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: #58687E;
+}
+
+.navbar {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .leftHeader {
+    position: absolute;
+    left: 2.5vw;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.mainPanel {
+    width: 95vw;
+    margin: auto;
+    font-size: 1.5rem;
+    color: white;
+    padding: 2% 0;
+}
+
+.tablePanel {
+    margin-top: 1rem;
+    background: #39495E 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    width: 100%;
+    min-height: 70vh;
+    padding: 1rem 2rem;
+}
+
+.buttonBar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 3rem;
+}
+
+.btn {
+    border-radius: 5px;
+    border: 1px solid #97A1A9;
+    height: 2rem;
+    padding: 0 15px;
+    color: #97A1A9;
+    background-color: #39495E;
+    margin: 0 .5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.btn span{
+    font-size: .9rem;
+}
+
+
+.btn-modal-outline{
+    border-radius: 5px;
+    height: 2rem;
+    padding: 0 15px;
+    margin: 0 .5rem;
+    cursor: pointer;
+    border: 2px solid #14AFF1;
+    background-color: #2C404E;
+    color: white;
+}
+
+.btn-filled{
+    background-color: #14AFF1;
+}
+
+.btn-active {
+    border: 1px solid #14AFF1;
+    color: white;
+}
+
+#searchBar {
+    outline: 0;
+    text-align: left;
+}
+
+/* input[type="checkbox"]::before{
+    content: url(/assets/images/checkBoxUnselected.svg);
+} */
+
+input[type="checkbox"]:not(:checked), input[type="checkbox"]:checked {
+    opacity: .01;
+}
+
+input[type="checkbox"]:not(:checked) + label:before{
+    content: url(../assets/images/checkBoxUnselected.svg);
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:after{
+    content: url(../assets/images/checkBoxSelected.svg);
+    cursor: pointer;
+}
+
+.searchIcon{
+    margin-left: -2.5rem;
+    color: #97A1A9;
+}
+
+table {
+    margin-top: 1rem;
+    width: 100%;
+    border-spacing: 0;
+}
+
+th,
+td {
+    font-weight: normal;
+    font-size: 12px;
+    color: #97A1A9;
+    border: 0;
+}
+
+td {
+    text-align: center;
+    color: white;
+    height: 2rem;
+}
+
+.darkRow {
+    background-color: #283A46;
+}
+
+.text-red {
+    color: #FF5B5B;
+}
+
+.highLightedRow{
+    background-color: #2A5368;
+}
+
+.smokedScreen{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    background-color: #2A3E4C;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.modal-header, .modal-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 2vh;
+}
+
+.modal-header{
+    border-bottom: 2px solid #356680;
+    color: white;
+}
+
+.modal-body{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-footer{
+    border-top: 2px solid #356680;
+}
+
+.modal-footer a{
+    color: #14AFF1;
+    text-decoration: none;
+}
+
+#editModal .modal-body{
+    height: 25vh;
+}
+
+#deleteModal, #editModal{
+    width: 30%;
+}
+
+#deleteModal .modal-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 2vh;
+    height: 15vh;
+}
+
+#deleteModal .modal-footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#editModal .modal-footer{
+    justify-content: space-between;
+}
+
+.closeModal{
+    cursor: pointer;
+}
+
+.row{
+    width: 80%;
+    margin: 1vh auto;
+    display: flex;
+}
+
+.row-90{
+    width: 90%;
+    margin: 1vh auto;
+    display: flex;
+}
+
+.row-100{
+    width: 100%;
+    margin: 1vh auto;
+    display: flex;
+}
+
+.col-4{
+    width: 40%;
+}
+
+.col-5{
+    width: 50%;
+}
+
+.col-6{
+    width: 60%;
+}
+
+.modalInputLabel{
+    text-align: left;
+    letter-spacing: 0.19px;
+    color: #97A1A9;
+    opacity: 1;
+}
+
+.modalInputArea{
+    width: 100%;
+    background: #283A46 0% 0% no-repeat padding-box;
+    height: 2rem;
+    border: 1px solid #356680;
+    border-radius: 10px;
+    opacity: 1;
+    outline: none;
+    padding: 0 10px;
+    color: white;
+}
+
+textarea{
+    height: 5rem !important;
+    padding: 10px !important;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+button:disabled{
+    background-color: #97A1A9;
+}
